@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class dik_ucgende_hipotenus_bulan_program {
+    public static void main(String[] args) {
+
+        /*
+         Java ile kullanıcıdan dik kenarlarının uzunluğunu alan ve hipotenüsü hesaplayan programı yazın.
+
+         Üç kenar uzunluğunu kullanıcıdan aldığınız üçgenin alanını hesaplayan programı yazınız.
+
+         Üç𝑔𝑒𝑛𝑖𝑛 ç𝑒𝑣𝑟𝑒𝑠𝑖 = 2𝑢
+
+         𝑢 = (a+b+c) / 2
+
+         Alan * Alan = 𝑢 * (𝑢 − 𝑎)* (𝑢 − 𝑏) * (𝑢 − 𝑐)
+         */
+
+        double kenar1;
+        double kenar2;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Lütfen bir kenar uzunluğu giriniz:");
+        kenar1 = input.nextDouble();
+
+        System.out.print("Lütfen bir kenar uzunluğu giriniz:");
+        kenar2 = input.nextDouble();
+
+        System.out.println("Üçgen de hipotenüs uzunluğu:" + Math.sqrt(((kenar1 * kenar1) + (kenar2 * kenar2))));
+        double hipo = Math.sqrt(((kenar1 * kenar1) + (kenar2 * kenar2)));
+
+        double u = (kenar2 + kenar1 + hipo) / 2;
+
+        double alan = Math.sqrt(u*(u-kenar1)*(u-kenar2)*(u-hipo));
+        System.out.println(alan);
+
+    }
+}
