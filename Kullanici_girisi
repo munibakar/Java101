@@ -1,0 +1,46 @@
+import java.util.Scanner;
+public class Kullanici_girisi {
+    public static void main(String[] args) {
+
+        /*
+         Eğer şifre yanlış ise kullanıcıya şifresini sıfırlayıp sıfırlamayacağını sorun,
+         eğer kullanıcı sıfırlamak isterse yeni girdiği şifrenin hatalı girdiği ve unuttuğu şifre ile aynı olmaması gerektiğini kontrol edip ,
+         şifreler aynı ise ekrana "Şifre oluşturulamadı, lütfen başka şifre giriniz." sorun yoksa "Şifre oluşturuldu" yazan programı yazınız.
+         */
+        String userName,Password,select;
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Lütfen kullanıcı adınızı giriniz:");
+        userName = input.nextLine();
+        System.out.print("Lütfen şifrenizi giriniz:");
+        Password = input.nextLine();
+
+        if(userName.equals("patika") && (Password.equals("java123"))){
+            System.out.println("Giriş Başarılı.");
+        }else{
+            System.out.println("Girdiğiniz şifre hatalı!");
+            System.out.print("Şifrenizi sıfırlamak ister misiniz? Y/N:");
+            select = input.nextLine();
+            if(select.equals("Y")){
+                System.out.print("Lütfen yeni şifrenizi giriniz.(Şifreniz son 3 şifreniz ile aynı olamaz!):");
+                Password = input.nextLine();
+                System.out.println("Kontrol ediliyor...");
+                if(Password.equals("java123")){
+                    System.out.print("Şifre oluşturulamadı.Lütfen başka şifre giriniz:");
+                    Password = input.nextLine();
+                    System.out.println("Kontrol ediliyor...");
+                    System.out.println("Şifre oluşturulamadı.İşleminiz iptal ediliyor..");
+                }else{
+                    System.out.println("Şifreniz başarılı bir şekilde oluşturuldu.");
+                }
+
+            } else if (select.equals("N")) {
+                System.out.println("Şifre sıfırlama işleminiz iptal ediliyor.Lütfen tekrar deneyiniz..!");
+            }else{
+                System.out.println("Hatalı tuşlama yaptınız.Lütfen tekrar deneyiniz!");
+            }
+
+        }
+
+    }
+}
