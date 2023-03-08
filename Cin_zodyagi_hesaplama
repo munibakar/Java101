@@ -1,0 +1,57 @@
+import java.util.Scanner;
+public class Cin_zodyagi_hesaplama {
+    public static void main(String[] args) {
+        /*
+        Çin zodyağı hesaplanırken kişinin doğum yılının 12 ile bölümünde kalana göre bulunur.
+
+        Doğum Tarihi %12 = 0 ➜ Maymun
+        Doğum Tarihi %12 = 1 ➜ Horoz
+        Doğum Tarihi %12 = 2 ➜ Köpek
+        Doğum Tarihi %12 = 3 ➜ Domuz
+        Doğum Tarihi %12 = 4 ➜ Fare
+        Doğum Tarihi %12 = 5 ➜ Öküz
+        Doğum Tarihi %12 = 6 ➜ Kaplan
+        Doğum Tarihi %12 = 7 ➜ Tavşan
+        Doğum Tarihi %12 = 8 ➜ Ejderha
+        Doğum Tarihi %12 = 9 ➜ Yılan
+        Doğum Tarihi %12 = 10 ➜ At
+        Doğum Tarihi %12 = 11 ➜ Koyun
+         */
+
+        int year,remainder;
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Doğum yılınızı giriniz:");
+        year = input.nextInt();
+
+        remainder = year % 12;
+
+        if (remainder == 0){
+            System.out.println("Çin Zodyağı  Burcunuz: MAYMUN");
+        } else if (remainder == 1) {
+            System.out.println("Çin Zodyağı  Burcunuz: HOROZ");
+        } else if (remainder == 2) {
+            System.out.println("Çin Zodyağı  Burcunuz: KÖPEK");
+        } else if (remainder == 3) {
+            System.out.println("Çin Zodyağı  Burcunuz: DOMUZ");
+        } else if (remainder == 4) {
+            System.out.println("Çin Zodyağı  Burcunuz: FARE");
+        } else if (remainder == 5) {
+            System.out.println("Çin Zodyağı  Burcunuz: ÖKÜZ");
+        } else if (remainder == 6) {
+            System.out.println("Çin Zodyağı  Burcunuz: KAPLAN");
+        } else if (remainder == 7) {
+            System.out.println("Çin Zodyağı  Burcunuz: TAVŞAN");
+        } else if (remainder == 8) {
+            System.out.println("Çin Zodyağı  Burcunuz: EJDERHA");
+        } else if (remainder == 9) {
+            System.out.println("Çin Zodyağı  Burcunuz: YILAN");
+        } else if (remainder == 10) {
+            System.out.println("Çin Zodyağı  Burcunuz: AT");
+        } else if (remainder ==11) {
+            System.out.println("Çin Zodyağı  Burcunuz: KOYUN");
+        }else{
+            System.out.println("Hatalı tuşlama yaptınız..!");
+        }
+    }
+}
