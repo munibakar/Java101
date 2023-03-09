@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class CiftVeDordunKatiOlanSayilarToplami {
+    public static void main(String[] args) {
+        /*
+        Java döngüler ile tek bir sayı girilene kadar kullanıcıdan girişleri kabul eden ve girilen değerlerden çift ve 4'ün katları olan sayıları toplayıp ekrana basan programı yazıyoruz.
+         */
+        int number;
+        Scanner input= new Scanner(System.in);
+
+
+        //Döngünün sonu belli olmadığı için while döngüsü kullanmak daha mantıklı gibi
+
+        int total=0;
+        boolean isodd = true;
+
+        while (isodd){
+            System.out.print("Sayı giriniz:");
+            number = input.nextInt();
+            if ((number % 2 == 0) && (number % 4 == 0)){
+                total = total  + number;
+            } else if (number % 2 == 1 ) {
+                isodd = false;
+            }
+        }
+        System.out.println(total);
+    }
+}
