@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class HarmonikSayilariBulanProgram {
+    public static void main(String[] args) {
+        int number;
+
+        Scanner input= new Scanner(System.in);
+        System.out.print("Lütfen bir sayı giriniz:");
+        number= input.nextInt();
+
+        double total1=0;
+        for (double i = 1; i<=number; i++){
+            double total = (1/i);
+            total1+= total;
+
+        }
+        System.out.println(total1);
+
+    }
+}
