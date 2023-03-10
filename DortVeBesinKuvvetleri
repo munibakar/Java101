@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class DortVeBesinKuvvetleri {
+    public static void main(String[] args) {
+        /*
+        Java döngüler ile girilen sayıya kadar olan 4 ve 5'in kuvvetlerini ekrana yazdıran programı yazıyoruz.
+         */
+
+        int number;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Sayı giriniz:");
+        number = input.nextInt();
+
+        int i = 0;
+
+        while (i <= number){
+            System.out.println(Math.pow(4,i) + " and " + Math.pow(5,i));
+            i++;
+        }
+    }
+}
