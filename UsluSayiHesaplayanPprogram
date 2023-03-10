@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class UsluSayiHesaplayanPprogram {
+    public static void main(String[] args) {
+        int a,b;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Lütfen bir sayı giriniz: ");
+        a = input.nextInt();
+        System.out.print("Lütfen üs değerini giriniz:");
+        b = input.nextInt();
+
+        double total= 1;
+        for (int i = 1;i<=b;i++){
+            if (i == b){
+                total = Math.pow(a,i);
+            }
+        }
+        System.out.println(total);
+    }
+}
