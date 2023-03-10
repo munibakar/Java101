@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class BasamakSayilarininToplaminiBulanProgram {
+    public static void main(String[] args) {
+        /*
+        Bir sayının basamak sayılarının toplamını hesaplayan program yazınız.
+
+        Örnek : 1643 = 1 + 6 + 4 + 3 = 14
+         */
+        int number;
+
+        Scanner input= new Scanner(System.in);
+        System.out.print("Lütfen bir sayı giriniz:");
+        number = input.nextInt();
+
+        int tempNumber = number;
+        int total=0;
+        int basSayisi = 0;
+
+        while (tempNumber !=0){
+            tempNumber = tempNumber/10;
+            basSayisi++;
+        }
+        tempNumber = number;
+        while (tempNumber != 0){
+            total+= tempNumber%10;
+            tempNumber = tempNumber /10;
+        }
+        System.out.println(total);
+    }
+}
