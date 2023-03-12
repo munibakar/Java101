@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Yildizlar_ile_elmas_yapimi {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Satır sayısını girin:");
+        int satir = sc.nextInt();
+
+        for(int i = 0;i<= satir;i++){
+
+            for (int k =1;k<=(satir-i);k++){
+                System.out.print(" ");
+            }
+            for(int m=1;m<= (2*i -1);m++){
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+        for (int a = 1; a <= satir- 1; a++) {
+            for (int b = 1; b <= a; b++) {
+                System.out.print(" ");
+            }
+            for (int c = 1; c <= 2 * (satir-a) - 1; c++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
