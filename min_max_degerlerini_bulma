@@ -1,0 +1,29 @@
+import java.util.List;
+import java.util.Scanner;
+public class min_max_degerlerini_bulma {
+    public static void main(String[] args) {
+        int count,number;
+        int max = 0;
+        int min = 0;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Kaç tane sayı gireceksiniz:");
+        count = input.nextInt();
+
+        for (int i = 1;i<=count;i++){
+            System.out.print(i +".sayıyı lütfen giriniz : ");
+            number = input.nextInt();
+            if (i == 1){
+                max = number;
+                min = number;
+
+            } else if (number>max) {
+                max = number;
+            } else if (number<min){
+                min = number;
+            }
+        }
+        System.out.println("En büyük sayı : " + max);
+        System.out.println("En küçük sayı : " + min);
+
+    }
+}
