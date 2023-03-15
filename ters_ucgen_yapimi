@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class ters_ucgen_yapimi{
+    public static void main(String[] args) {
+        int n;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Lütfen basamak sayısını giriniz:");
+        n = input.nextInt();
+
+        for (int i= 1;i<=n ; i++){
+            for (int k = 1;k<=i; k++){
+                System.out.print(" ");
+            }
+            for (int l =0;l<=2*(n-i);l++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
