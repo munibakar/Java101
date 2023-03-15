@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class ebob_ekok_bulan_program {
+    public static void main(String[] args) {
+        int n1,n2;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Lütfen n1 sayısını giriniz:");
+        n1 = input.nextInt();
+        System.out.print("Lütfen n2 sayısını giriniz:");
+        n2 = input.nextInt();
+
+        int  k = Math.min(n1,n2);
+        int ebob = 0;
+        int ekok = 0;
+        int i =  1;
+        while (i <= k){
+            if ((n1 % i == 0) && (n2 % i == 0)){
+                ebob = i;
+            }
+            i++;
+        }
+        ekok = (n1*n2) / ebob;
+        System.out.println("EKOK : "+ekok);
+        System.out.println("EBOB : "+ebob);
+
+    }
+}
