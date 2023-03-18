@@ -1,0 +1,25 @@
+public class palindrom_sayi {
+    static int palindrom(int n){
+        String reverseNumber="";
+        String number = "";
+        int temp;
+        temp =n;
+        while (temp != 0){
+            int k = temp %10;
+            reverseNumber = reverseNumber + k;
+            temp = temp/10;
+        }
+        number = number + n;
+        if (number.equals(reverseNumber)){
+            System.out.println("palindrom");
+        }else{
+            System.out.println("Palindrom değil");
+        }
+        return temp;
+
+    }
+
+    public static void main(String[] args) {
+        palindrom(988);
+    }
+}
