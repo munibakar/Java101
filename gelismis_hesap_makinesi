@@ -1,0 +1,146 @@
+import java.util.Scanner;
+public class gelismis_hesap_makinesi {
+
+    static double sum(){
+        double a,b,result = 0;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Kaç adet sayı girecekseniz? :");
+        a = input.nextDouble();
+
+        for (int i = 1;i<=a;i++){
+            System.out.print(i+". sayıyı giriniz:");
+            b = input.nextDouble();
+            result = result +b;
+        }
+        return result;
+    }
+    static double subtraction(){
+        double a,b,result = 0;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Kaç adet sayı girecekseniz ? :");
+        a = input.nextDouble();
+
+        for (int i = 1;i<=a;i++){
+            System.out.print(i+". sayıyı giriniz:");
+            b = input.nextDouble();
+            result = result -b;
+        }
+        return result;
+    }
+    static  double multiplication(){
+        double a,b,result = 1;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Kaç adet sayı girecekseniz? :");
+        a = input.nextDouble();
+
+        for (int i = 1;i<=a;i++){
+            System.out.print(i+". sayıyı giriniz:");
+            b = input.nextDouble();
+            result = result *b;
+        }
+        return result;
+    }
+    static double divison(){
+        double a,b,result;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Lütfen bir sayı giriniz:");
+        a = input.nextDouble();
+        System.out.print("Lütfen bir sayı giriniz:");
+        b = input.nextDouble();
+        if (b == 0 ){
+            System.out.println("Böleni 0 giremezsiniz!");
+            divison();
+        }
+        result = a/b;
+        return result;
+    }
+    static double exponentialNumber(){
+        double a,b,result;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Lütfen taban sayısını giriniz:");
+        a = input.nextDouble();
+        System.out.print("Lütfen üst sayısını giriniz:");
+        b = input.nextDouble();
+        result = Math.pow(a,b);
+        return result;
+
+    }
+    static int factorial(){
+        int a,result = 1;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Lütfen bir sayı giriniz:");
+        a = input.nextInt();
+        if (a<0){
+            System.out.println("Hatalı tuşlama yaptınız.Lütfen 0'dan büyük bir sayı girerek tekrar deneyiniz.!");
+            factorial();
+        }
+        for (int i =1;i<=a;i++){
+            result *=i;
+        }
+        return result;
+
+    }
+    static double mode(){
+        double a,b,result;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Lütfen bir sayı giriniz:");
+        a = input.nextDouble();
+        System.out.print("Lütfen bir sayı giriniz:");
+        b = input.nextDouble();
+        result = a % b;
+        return result;
+    }
+    static void perimeter_area(){
+        double a,b;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Lütfen uzun kenar uzunluğunu giriniz:");
+        a = input.nextDouble();
+        System.out.print("Lütfen kısa kenar uzunluğunu giriniz:");
+        b = input.nextDouble();
+        if ((a<0) && (b <0)){
+            System.out.println("Hatalı tuşlama yaptınız.Lütfen 0'dan büyük değer girerek tekrar deneyiniz.!");
+            perimeter_area();
+
+        }
+        System.out.println("Çevre =" + 2*(a+b));
+        System.out.println("Alan = " + (a*b));
+
+
+    }
+
+    public static void main(String[] args) {
+        int number;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("1-Toplama İşlemi\n" +
+                "2-Çıkarma İşlemi\n" +
+                "3-Çarpma İşlemi\n" +
+                "4-Bölme İşlemi\n" +
+                "5-Üslü Sayı Hesaplama\n" +
+                "6-Faktöriyel Hesaplama\n" +
+                "7-Mod Alma\n" +
+                "8-Dikdörtgen Alan ve Çevre Hesabı\n" +
+                "Lütfen yapmak istediğiniz işlem numarasını giriniz:");
+        number = input.nextInt();
+        if (number == 1){
+            System.out.println(sum());
+        } else if (number == 2) {
+            System.out.println(subtraction());
+        } else if (number == 3) {
+            System.out.println(multiplication());
+        } else if (number == 4) {
+            System.out.println(divison());
+        } else if (number == 5) {
+            System.out.println(exponentialNumber());
+        } else if (number == 6) {
+            System.out.println(factorial());
+        } else if (number ==7) {
+            System.out.println(mode());
+        } else if (number == 8) {
+            perimeter_area();
+        }else{
+            System.out.println("Hatalı tuşlama yaptınız lütfen tekrar deneyiniz.!");
+        }
+    }
+
+}
