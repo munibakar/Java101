@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class recursive_us_hesabi {
+    static int exponential(int a,int b){
+        int result = 1;
+
+        if (b == 0){
+            return 1;
+        }else {
+            return a * exponential(a,b-1);
+        }
+    }
+    static void loop (){
+        int a,b;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Lütfen taban sayısını giriniz:");
+        a = input.nextInt();
+        System.out.print("Lütfen üs sayısını giriniz:");
+        b = input.nextInt();
+        System.out.println("Sonuç: " +exponential(a,b));
+    }
+
+    public static void main(String[] args) {
+        loop();
+    }
+}
