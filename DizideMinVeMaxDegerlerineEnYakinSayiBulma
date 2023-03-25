@@ -1,0 +1,28 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class DizideMinVeMaxDegerlerineEnYakinSayiBulma {
+    public static void main(String[] args) {
+        int n;
+        int[] dizi = {15,12,788,1,-1,-778,2,0};
+        Scanner input = new Scanner(System.in);
+        System.out.print("Girilen sayı :");
+        n = input.nextInt();
+        Arrays.sort(dizi);
+        int min = dizi[0];
+        int max = dizi[dizi.length-1];
+
+        for (int i: dizi){
+            if (i<n){
+                min = i;
+            }
+            if (i>n){
+                max = i;
+                break;
+            }
+        }
+        System.out.println("Girilen sayıdan küçük en yakın sayı : " + min);
+        System.out.println("Girilen sayıdan büyük en yakın sayı : " + max);
+    }
+}
